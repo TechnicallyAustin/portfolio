@@ -12,16 +12,6 @@ export default {
     fontFamily: {
       sans: ["Garamond", "sans-serif"],
     },
-    colors: {
-      "page-black": "#000000",
-      "page-white": "#FFFFFF",
-      "page-color": "#1b0428",
-      "text-color": "#ee82ee",
-      "text-white": "#FFFFFF",
-      "text-neon": "",
-      "button-color": "",
-      "component-color": "",
-    },
     extend: {},
   },
   darkMode: "class",
@@ -31,17 +21,17 @@ export default {
       themes: {
         light: {
           colors: {
-            background: "#Color",
-            foreground: "#Color",
-            divider: "#Color",
+            background: "#FFFFFF",
+            foreground: "#000000",
+            divider: "#000000",
             DEFAULT: "#Color",
           },
         },
         dark: {
           colors: {
-            background: "#052814",
-            foreground: "#Color",
-            divider: "#Color",
+            background: "#22223b",
+            foreground: "#f2e9e4",
+            divider: "#f2e9e4",
             DEFAULT: "#Color",
           },
         },
