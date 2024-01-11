@@ -14,7 +14,9 @@ export default function Footer() {
     );
 
     const tabRef = useRef(null)
-
+    const handleClick = () => {
+        tabRef.current?.scrollIntoView({behavior: 'smooth'})
+    }
 
     const togglePage = (selectedTab) => {
       setPages((prevPages) => {
@@ -37,29 +39,38 @@ export default function Footer() {
     },[pages])
 
     return (
-      <footer className="w-full h-28 flex justify-center self-center overflow-y-scroll items-center px-6 p-3 pt-0">
+      <footer className="w-full h-28  flex justify-center self-center overflow-y-scroll  items-center px-6 p-3 pt-0">
         <Tabs
           onSelectionChange={(selectedTab) => togglePage(selectedTab)}
           selectedKey={selected}
           isblurred
-          variant="light"
-          color="warning"
+          variant="underlined"
+          color="primary"
           fullWidth={true}
           size="md"
           id="quickLinks"
-          className="w-full h-full flex justify-around items-center rounded-lg text-xl"
+          className={
+            "w-full h-full flex justify-around items-center rounded-lg text-xl bg-opacity-10"
+          }
+          classNames={{
+            tabList: "h-full p-0 ",
+            tab: "h-full ",
+            cursor: "h-1 bg-opacity-70",
+          }}
         >
-          {Object.keys(pages).map((page) => {
-            return (
-              <Tab
-                className="relative z-30"
-                key={`${pages[page].id}`}
-                id={`${pages[page].id}`}
-                fullWidth={true}
-                title={pages[page].label}
-              />
-            );
-          })}
+          {Object.keys(pages)
+            .slice(0, 5)
+            .map((page) => {
+              return (
+                <Tab
+                  className="relative z-30"
+                  key={`${pages[page].id}`}
+                  id={`${pages[page].id}`}
+                  fullWidth={true}
+                  title={pages[page].label}
+                />
+              );
+            })}
         </Tabs>
       </footer>
     );

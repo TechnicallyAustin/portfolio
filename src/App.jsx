@@ -70,7 +70,7 @@ export default function App() {
         className="dark bg-background text-foreground sans w-full min-h-screen h-screen flex flex-col gap-2 shadow-lg"
       >
         <Header pages={pages} />
-        <Divider className="bg-opacity-30" />
+
 
         <main className="w-full h-full px-6">
           {pages["home"].clicked && <Home />}
