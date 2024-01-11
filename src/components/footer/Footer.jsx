@@ -55,7 +55,7 @@ export default function Footer() {
           classNames={{
             tabList: "h-full p-0 ",
             tab: "h-full ",
-            cursor: "h-1 bg-opacity-70",
+            cursor: "h-1 bg-opacity-70 bg-foreground",
           }}
         >
           {Object.keys(pages)
