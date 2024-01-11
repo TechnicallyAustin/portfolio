@@ -12,23 +12,6 @@ export default function Footer() {
     const {pages, setPages} = useContext(PageContext)
 
 
-    const handleState = (selectedTab) => {
-        console.log("Handle state APP", selectedTab, pages[selectedTab])
-    }
-
-    const togglePagev1 = (selectedTab) => {
-        setPages(prevPages => (
-            {
-            ...prevPages,
-            [selectedTab]: {
-                ...prevPages[selectedTab],
-                clicked: !prevPages[selectedTab].clicked
-            } 
-
-        }))
-         console.log("Handle state APP", page, pages[page]);
-    } 
-
     const togglePage = (selectedTab) => {
       setPages((prevPages) => {
         const updatedPages = Object.keys(prevPages).reduce((acc, page) => {
@@ -46,18 +29,18 @@ export default function Footer() {
 
 
     return (
-      <footer className="w-full h-20 flex justify-center self-center items-center px-6 p-3 pt-0">
+      <footer className="w-full h-28 flex justify-center self-center items-center px-6 p-3 pt-0">
         <Tabs
         onSelectionChange={(selectedTab) => togglePage(selectedTab)}
           isblurred
           variant="bordered"
           color="warning"
           fullWidth={true}
-          size="md"
+          size="lg"
           id="quickLinks"
-          className="w-full h-full flex justify-around items-center rounded-lg text-lg"
+          className="w-full h-full flex justify-around items-center rounded-lg text-xl"
         >
-          {Object.keys(pages).slice(0,5).map((page) => {
+          {Object.keys(pages).map((page) => {
 
             return (
               <Tab
