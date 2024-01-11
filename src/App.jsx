@@ -6,6 +6,11 @@ import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import { PageContext } from "./PageContext";
+import Projects from "./components/projects/Projects";
+import Resume from "./components/resume/Resume";
+import Contact from "./components/contact/Contact";
+import Photos from "./components/photos/Photos";
+import Blog from "./components/blog/Blog";
 
 
 export default function App() {
@@ -70,11 +75,11 @@ export default function App() {
         <main className="w-full h-full px-6">
           {pages["home"].clicked && <Home />}
           {pages["about"].clicked && <About />}
-          {pages["projects"].clicked && <Home />}
-          {pages["resume"].clicked && <Home />}
-          {pages["contact"].clicked && <Home />}
-          {pages["photos"].clicked && <Home />}
-          {pages["blog"].clicked && <Home />}
+          {pages["projects"].clicked && <Projects />}
+          {pages["resume"].clicked && <Resume />}
+          {pages["contact"].clicked && <Contact />}
+          {pages["photos"].clicked && <Photos />}
+          {pages["blog"].clicked && <Blog />}
 
           <Router>
             <Routes>
@@ -85,6 +90,7 @@ export default function App() {
             </Routes>
           </Router>
         </main>
+
 
         <Footer />
       </div>
