@@ -39,7 +39,7 @@ export default function Footer() {
     },[pages])
 
     return (
-      <footer className="w-full h-28  flex justify-center self-center overflow-y-scroll  items-center px-6 p-3 pt-0">
+      <footer className="w-full h-16  flex justify-center self-center overflow-y-scroll  items-center px-6 p-3 pt-0">
         <Tabs
           onSelectionChange={(selectedTab) => togglePage(selectedTab)}
           selectedKey={selected}

@@ -67,12 +67,12 @@ export default function App() {
     <PageContext.Provider value={{ pages, setPages }}>
       <div
         id="app"
-        className="dark bg-background text-foreground sans w-full min-h-screen h-screen flex flex-col gap-2 shadow-lg"
+        className="dark bg-background text-foreground sans w-full min-h-full h-screen flex flex-col gap-2 shadow-lg"
       >
         <Header pages={pages} />
 
 
-        <main className="w-full h-full px-6">
+        <main className="w-full h-5/6 px-6">
           {pages["home"].clicked && <Home />}
           {pages["about"].clicked && <About />}
           {pages["projects"].clicked && <Projects />}
@@ -90,7 +90,6 @@ export default function App() {
             </Routes>
           </Router>
         </main>
-
 
         <Footer />
       </div>

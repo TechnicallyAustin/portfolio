@@ -44,7 +44,7 @@ export default function Header() {
 
 
     return (
-      <header className="w-full h-20 flex justify-between items-center shadow-lg">
+      <header className="w-full h-16 flex justify-between items-center shadow-lg">
         <Navbar
           className="w-full h-full flex justify-center items-center"
           isMenuOpen={isMenuOpen}
@@ -89,6 +89,9 @@ export default function Header() {
                 </article>
                 <article className="w-1/2 h-full flex justify-center items-center border">
                     <p className='w-full h-full'>Personal Blog </p>
+                </article>
+                <article className="w-1/2 h-full flex justify-center items-center border">
+                    <p className='w-full h-full'>Notion Pages </p>
                 </article>
             </section>
 

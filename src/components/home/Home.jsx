@@ -4,7 +4,7 @@ import {Image} from "@nextui-org/react"
 
 export default function Home() {
     return (
-        <section className='w-full h-full bg-background text-foreground'>
+        <section className='w-full h-full'>
             <header className='w-full h-auto p-3 relative z-20 top-20 flex flex-col gap-8 shadow-xl rounded-xl'>
                 <div className='w-full h-auto flex flex-col gap-2'>
                 <h1 className='w-full h-auto text-3xl'>Hey, I'm Austin Johnson </h1>
