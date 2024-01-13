@@ -11,6 +11,7 @@ import Resume from "./components/resume/Resume";
 import Contact from "./components/contact/Contact";
 import Photos from "./components/photos/Photos";
 import Blog from "./components/blog/Blog";
+import Layout from "./layout/Layout.jsx";
 
 
 export default function App() {
@@ -67,15 +68,15 @@ export default function App() {
     <PageContext.Provider value={{ pages, setPages }}>
       <div
         id="app"
-        className="dark bg-background text-foreground sans w-full min-h-full h-screen flex flex-col gap-2 shadow-lg"
+        className="dark bg-background text-foreground sans w-full min-h-screen h-screen flex flex-col gap-2 shadow-lg"
       >
         <Header pages={pages} />
 
 
-        <main className="w-full h-5/6 px-6">
+        <main className="w-full h-full px-6">
           {pages["home"].clicked && <Home />}
-          {pages["about"].clicked && <About />}
-          {pages["projects"].clicked && <Projects />}
+          {pages["about"].clicked && <Layout><About /></Layout> }
+          {pages["projects"].clicked && <Layout><Projects /></Layout> }
           {pages["resume"].clicked && <Resume />}
           {pages["contact"].clicked && <Contact />}
           {pages["photos"].clicked && <Photos />}
@@ -84,12 +85,13 @@ export default function App() {
           <Router>
             <Routes>
               <Route path="/" element={""} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={""} />
               <Route path="/photos" element={""} />
               <Route path="/blog" element={""} />
             </Routes>
           </Router>
         </main>
+
 
         <Footer />
       </div>
