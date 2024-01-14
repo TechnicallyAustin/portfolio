@@ -23,7 +23,7 @@ export default function Footer() {
         const updatedPages = Object.keys(prevPages).reduce((acc, page) => {
           acc[page] = {
             ...prevPages[page],
-            clicked: page === selectedTab ? !prevPages[page].clicked : false,
+            clicked: page === selectedTab ? true : false,
           };
           return acc;
         }, {});

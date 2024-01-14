@@ -64,7 +64,7 @@ export default function App() {
     <PageContext.Provider value={{ pages, setPages }}>
       <div
         id="app"
-        className="dark bg-background text-foreground sans w-full min-h-screen h-screen grid grid-rows-6 gap-2 shadow-lg"
+        className="dark bg-background text-foreground sans w-full min-h-screen h-screen sm:h-[95vh] flex flex-wrap  shadow-lg"
       >
         <Header pages={pages} className="row-span-1"/>
 
